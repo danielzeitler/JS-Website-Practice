@@ -1,7 +1,7 @@
 // Responsive Menu
-var menuIcon = document.querySelector("#menue-icon");
-var closeIcon = document.querySelector("#close-icon");
-var nav = document.querySelector(".navigation ul");
+let menuIcon = document.querySelector("#menue-icon");
+let closeIcon = document.querySelector("#close-icon");
+let nav = document.querySelector(".navigation ul");
 
 // Event Listener
 menuIcon.addEventListener("click", openNav);

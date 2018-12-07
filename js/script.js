@@ -1,9 +1,9 @@
 
 // Responsive Menu
 
-var menuIcon = document.querySelector("#menue-icon");
-var closeIcon = document.querySelector("#close-icon");
-var nav = document.querySelector(".navigation ul");
+const menuIcon = document.querySelector("#menue-icon");
+const closeIcon = document.querySelector("#close-icon");
+const nav = document.querySelector(".navigation ul");
 
 
 // Debug log
@@ -33,7 +33,7 @@ function openNav(e){
 
 // Scroll to top
 
-var myBtn = document.getElementById("myBtn");
+let myBtn = document.getElementById("myBtn");
 
 myBtn.addEventListener("click", backToTop);
 
@@ -50,7 +50,7 @@ function scrollFunction(){
 }
 
 function backToTop() {
-	var timer = setInterval(function(){
+	let timer = setInterval(function(){
 		if(window.scrollY > 0) {
 			window.scrollBy(0, -50);
 		} else {
@@ -61,8 +61,8 @@ function backToTop() {
 
 // Register Form Start
 
-var registerForm = document.getElementById("newsletter");
-var emailInput = document.forms["myForm"]["email"];
+let registerForm = document.getElementById("newsletter");
+let emailInput = document.forms["myForm"]["email"];
 let emailError = document.querySelector(".errorMessage");
 let successMessage = document.querySelector(".successMessage");
 
