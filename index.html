@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Daniel Zeitler | Design and Code</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Daniel Zeitler ist Ihr zuverlässiger Partner für professionelle Websiten. Leistungsstarkes Design und individuelle Beratung. Informieren Sie sich jetzt!" name="description">
+	<link rel="icon" type="favicon/png" href="img/favicon.jpg" size="40x40">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src="js/menu.js"></script>
+</head>
+<body>
+	
+	<!-- all header items -->
+	<header class="svg-bg">
+		<div class="wrapper">
+			<div class="navigation">
+				<a href="index.html"><img src="img/logo.svg" class="logo"></a>
+				<nav>
+					<a href="#" id="menue-icon"></a>
+					<a href="#" id="close-icon"></a>
+					<ul class="fade">
+						<li><a href="about.html">about</a></li>
+						<li><a href="work.html">work</a></li>
+						<li><a href="contact.html">contact</a></li>
+					</ul>
+				</nav>
+			</div>
+			<section class="header-center">
+				<h1>Your product is crushing it,<br>but your visual identity isn't?<br><span><a>I can help.</a></span></h1>
+			</section>
+		</div>
+	</header>
+
+	<!-- Back to top Button -->
+	<button id="myBtn"><img src="img/arrow_up.svg"></button>
+
+	<!-- Start Slideshow -->
+	<div class="wrapper">
+		<section class="slideshow-container">
+			<div class="slideImg fade">
+				<div class="box">
+					<small>mercedes-benz</small>
+					<h3>A hub for all things<br>done right</h3>
+					<a href="#" class="btn-outline">
+						<img src="img/arrow_right.svg">
+					</a>
+				</div>
+				<img src="img/slide_1.jpg" alt="Slideshow image">
+			</div>
+
+			<div class="slideImg fade">
+				<div class="box">
+					<small>personal project</small>
+					<h3>Reinventing the print design<br>game with eyerobic</h3>
+					<a href="#" class="btn-outline">
+						<img src="img/arrow_right.svg">
+					</a>
+				</div>
+				<img src="img/slide_2.jpg">
+			</div>
+
+			<div class="slideImg fade">
+				<div class="box">
+					<small>kesseböhmer</small>
+					<h3>Connecting desks with <br>an ergonomic lifestyle</h3>
+					<a href="#" class="btn-outline">
+						<img src="img/arrow_right.svg">
+					</a>
+				</div>
+				<img src="img/slide_3.jpg" alt="Slideshow image">
+			</div>
+
+			<div class="slideImg fade">
+				<div class="box">
+					<small>sonepar</small>
+					<h3>An experience where the <br>customers gets <br>to shop and play</h3>
+					<a href="#" class="btn-outline">
+						<img src="img/arrow_right.svg">
+					</a>
+				</div>
+				<img src="img/slide_4.jpg" alt="Slideshow image">
+			</div>
+
+			<div class="dot-nav">
+				<span class="dot active"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</div>
+		</section>
+		
+		<!-- Start Blog -->
+		<section class="spacing">
+			<h2>The latest happenings, press, and<br>perspectives on the design world</h2>
+			<a href="#" class="btn">
+				<span>view all news</span>
+				<img src="img/arrow_right.svg">
+			</a>
+
+			<div class="blog-post">
+				<div class="blog-content">
+					<img src="img/blog_3.jpg" class="blogImg">
+					<small>news | 05.03.2018</small>
+					<h3>The risk and opportunities<br> of virtual reality</h3>
+				</div>
+
+				<div class="blog-content">
+					<img src="img/blog_2.jpg" class="blogImg">
+					<small>news | 06.03.2018</small>
+					<h3>Tackling JavaScript<br>Algorithm Challenges</h3>
+				</div>
+
+				<div class="blog-content">
+					<img src="img/blog_1.jpg" class="blogImg">
+					<small>news | 09.03.2018</small>
+					<h3>A nice collection<br>of UX Books</h3>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+		
+		<!-- Clients and Projects -->
+		<section class="spacing">
+			<h2>My Mission is really simple. I want to create meaningful<br>
+				things people love and bring joy to their lives.</h2>
+			<a href="#" class="btn">
+				<span>more about me</span>
+				<img src="img/arrow_right.svg">
+			</a>
+			<img src="img/logo_list.png" class="logoGrid">
+		</section>
+	</div>
+	
+	<!-- My Work -->
+	<section class="myWork">
+		<a href="work.html" class="btn-big">
+			<h3><span>view my work</span></h3>
+			<img src="img/arrow_right.svg">
+		</a>
+	</section>
+	
+	<!-- Footer Start -->
+	<footer>
+		<div class="wrapper">
+			<div class="footer-flex">
+				<img src="img/logo.svg" class="logo">
+				<ul>
+					<li>Work</li>
+					<br>
+					<li>Smart Office</li>
+					<li>Eyerobic</li>
+					<li>Beer Music</li>
+					<li>Sonepar</li>
+				</ul>
+
+				<ul>
+					<li>Lets be friends</li>
+					<br>
+					<li>Instagram</li>
+					<li>Twitter</li>
+					<li>LinkedIn</li>
+				</ul>
+
+				<form method="POST" action="#" name="myForm" id="newsletter">
+					<input type="input" name="email" id="email" placeholder="Please enter your e-mail">
+					<input type="submit" name="Submit" id="submit">
+					<span class="errorMessage"></span>
+					<span class="successMessage"></span>
+				</form>
+			</div>
+		</div>
+	</footer>
+
+	<!-- JavaScript Files -->
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/slideshow.js"></script>
+</body>
+</html>

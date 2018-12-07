@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Daniel Zeitler | Design and Code</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Daniel Zeitler ist Ihr zuverlässiger Partner für professionelle Websiten. Leistungsstarkes Design und individuelle Beratung. Informieren Sie sich jetzt!" name="description">
+	<link rel="icon" type="favicon/png" href="img/favicon.jpg" size="40x40">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src="js/menu.js"></script>
+</head>
+<body>
+	
+	<!-- all header items -->
+	<header>
+		<div class="wrapper">
+			<div class="navigation">
+				<a href="index.html"><img src="img/logo.svg" class="logo"></a>
+				<nav>
+					<a href="#" id="menue-icon"></a>
+					<a href="#" id="close-icon"></a>
+					<ul>
+						<li><a href="about.html">about</a></li>
+						<li><a href="work.html">work</a></li>
+						<li class="active-nav"><a href="contact.html">contact</a></li>
+					</ul>
+				</nav>
+			</div>
+			<section class="header-center">
+				<h1>Contact me <br> if you can</h1>				
+			</section>
+		</div>
+	</header>
+
+	<!-- Back to top Button -->
+	<button id="myBtn"><img src="img/arrow_up.svg"></button>
+
+	<!-- Form Validation -->
+	<div class="wrapper">
+		<section class="">
+			<h2>Don't hesitate to contact me</h2>
+			<p>I know the feel when you want feedback for a project, but 
+			you don’t know whom to show. Feel free to mail me your problems
+			and we can chat about it.</p>
+		</section>
+		<form method="POST" name="contactForm" id="contactNewsletter" class="contactGrid"> 
+			<div>
+				<label for="vorname"></label>
+				<input id="vorname" type="text" name="name" placeholder="Your Name" class="formInput">			
+				<span class="errorMessage"></span>
+				<span class="successMessage"></span>
+			</div>
+
+			<div>
+				<label for="phone"></label>
+				<input id="phone" type="text" name="phone" placeholder="Your phone number" class="formInput">			
+				<span class="errorMessage"></span>
+				<span class="successMessage"></span>
+			</div>
+
+			<div>
+				<input type="submit" name="Submit" id="submitButton">
+			</div>
+		</form>
+	</div>
+
+	<!-- Footer Start -->
+	<footer>
+		<div class="wrapper">
+			<div class="footer-flex">
+				<img src="img/logo.svg" class="logo">
+				<ul>
+					<li>Work</li>
+					<br>
+					<li>Smart Office</li>
+					<li>Eyerobic</li>
+					<li>Beer Music</li>
+					<li>Sonepar</li>
+				</ul>
+
+				<ul>
+					<li>Lets be friends</li>
+					<br>
+					<li>Instagram</li>
+					<li>Twitter</li>
+					<li>LinkedIn</li>
+				</ul>
+
+				<form method="POST" action="#" name="myForm" id="newsletter">
+					<input type="input" name="email" id="email" placeholder="Please enter your e-mail">
+					<input type="submit" name="Submit" id="submit">
+					<span class="errorMessage"></span>
+					<span class="successMessage"></span>
+				</form>
+			</div>
+
+		</div>
+	</footer>
+
+	<script type="text/javascript">
+
+		// Select all Buttons and Forms
+		let submitBtn = document.querySelector("#submitButton");
+		let contactNewsletter = document.querySelector("#contactNewsletter");
+
+		// Select all Inputs
+		let allInputs = document.querySelectorAll(".formInput");
+		let nameInput = document.forms["contactForm"]["name"];
+		let phoneInput = document.forms["contactForm"]["phone"];
+		let mailInput = document.forms["contactForm"]["mail"];
+		
+		// Select alerts
+		let errorMsg = document.querySelectorAll(".errorMessage");
+		let successMsg = document.querySelectorAll(".successMessage");
+
+		// Setting Event Listeners
+		nameInput.addEventListener("blur", nameVerify);
+		nameInput.addEventListener("keyup", nameVerify);
+
+		phoneInput.addEventListener("blur", phoneVerify);
+		phoneInput.addEventListener("keyup", phoneVerify);
+		phoneInput.addEventListener("blur", checkPhone);
+		phoneInput.addEventListener("keyup", checkPhone);
+
+		contactNewsletter.addEventListener("submit", validation);
+
+		function validation(e) {
+			e.preventDefault();
+			nameVerify();
+			checkPhone();
+		}
+
+		function nameVerify() {
+			if(nameInput.value != "") {
+				errorMsg[0].textContent = "";
+			} else {
+				errorMsg[0].textContent = "please enter a Name";
+			}
+		}
+
+		function phoneVerify() {
+			if(phoneInput.value !="") {
+				errorMsg[1].textContent = "";
+			}
+		}
+
+		function checkPhone() {
+			var regexPhone = /^\(?\d{4}\)?-?\s*-?\d{8}$/;
+
+			if(regexPhone.test(phoneInput.value)) {
+				errorMsg[1].textContent = "";
+				successMsg[1].textContent = "Valid phone number"
+				return true;
+			} else {
+				errorMsg[1].textContent = "Your phone number must be 12 digits";
+				successMsg[1].textContent = ""
+				return false;
+			}
+		}
+
+		const acc = document.querySelectorAll(".buttonPanel");
+		const panel = document.querySelectorAll(".panel");
+
+		acc.forEach(function(accs){
+			accs.addEventListener("click", openAcc);
+		});
+
+		function openAcc(event) {
+			if(event.target.classList.length === 1) {
+				acc.forEach(acc => acc.classList.remove("activeAcc"));
+				panel.forEach(panels => panels.style.maxHeight = null);
+			}
+
+			event.target.classList.toggle("activeAcc");
+			
+			const content = event.target.nextElementSibling;
+			if(content.style.maxHeight) {
+				content.style.maxHeight = null;
+			} else {
+				content.style.maxHeight = content.scrollHeight + "px";
+			}
+		}
+	</script>
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/imagegallery.js"></script>
+</body>
+</html>
