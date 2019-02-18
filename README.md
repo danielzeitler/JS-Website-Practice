@@ -1,3 +1,3 @@
 # JavaScript Website Practice
 
-> This was my first ever JS Website I did. 
+> This is the first JS Website I made.
